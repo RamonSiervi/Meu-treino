@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Treinos - Modelo App</title>
+<style>
+  :root{
+    --bg:#f1f5f9;
+    --card:#ffffff;
+    --muted:#6b7280;
+    --accent:#0ea5e9;
+    --radius:16px;
+  }
+  body{font-family:Inter,system-ui,Segoe UI,Arial; margin:0; background:linear-gradient(180deg,#eef2ff 0%, #f1f5f9 100%); color:#0f172a;}
+  header{position:sticky; top:0; backdrop-filter:blur(6px); background:rgba(255,255,255,0.8); border-bottom:1px solid rgba(15,23,42,0.06);}
+  .container{max-width:980px; margin:0 auto; padding:18px;}
+  .brand{display:flex; gap:12px; align-items:center;}
+  .logo{width:46px; height:46px; background:#0ea5e9; color:#fff; display:grid; place-items:center; font-weight:700; border-radius:10px;}
+  h1{margin:0; font-size:18px;}
+  .start-btn{margin-left:auto; background:#0284c7; color:#fff; padding:10px 14px; border-radius:12px; text-decoration:none; font-weight:600;}
+  main{padding:18px;}
+  .section{margin-bottom:18px;}
+  .section-header{display:flex; align-items:center; justify-content:space-between; padding:12px; border-radius:12px; color:#fff;}
+  .card{background:var(--card); border-radius:var(--radius); padding:14px; box-shadow:0 6px 18px rgba(2,6,23,0.06); display:flex; gap:14px; align-items:flex-start;}
+  .info{flex:1; min-width:0;}
+  .info h3{margin:0 0 6px 0; font-size:16px;}
+  .meta{color:var(--muted); font-size:14px;}
+  .meta div{margin-bottom:6px;}
+  .thumb{width:180px; flex-shrink:0;}
+  video{width:100%; height:100%; border-radius:10px; background:#000;}
+  .toggle{cursor:pointer; font-weight:700;}
+  footer{color:var(--muted); text-align:center; padding:20px 0;}
+  @media(max-width:720px){
+    .card{flex-direction:column;}
+    .thumb{width:100%;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container brand">
+    <div class="logo">MF</div>
+    <div>
+      <div style="font-size:12px;color:var(--muted);text-transform:uppercase;">Treino</div>
+      <div style="font-weight:700;">Seu plano de treino</div>
+    </div>
+    <a class="start-btn" href="#">INICIAR</a>
+  </div>
+</header>
+<main class="container">
+
+<section class="section">
+<div class="section-header" style="background:linear-gradient(90deg,#0284c7,#06b6d4)"><div style="display:flex;gap:10px;align-items:center;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.12);display:grid;place-items:center;font-weight:700;">⚡</div><h2 style="margin:0;font-size:18px">Treino de Quadríceps</h2></div><div class="toggle" onclick="toggleSection(this)">-</div></div>
+<div class="section-body" style="margin-top:12px;display:block;">
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Agachamento Sumô com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/10/10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/DB_Sumo_Squat_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Leg Press 45º</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x15 (pés colados) + 15 (afastados)</div>
+<div><strong>Carga:</strong> 12 kg</div>
+<div><strong>Intervalo:</strong> 40s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Leg_Press_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Adução de Quadril Máquina</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/10/10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Hip_Adduction_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Cadeira Flexora</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/10/10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Leg_Curl_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Cadeira Flexora Unilateral</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/10/10/10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Seated_Leg_Curl_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Panturrilha no Step</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/bodyweight/_1080/Standing_Calf_Raise_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Abdominal Canivete</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/bodyweight/_1080/V-Up_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Esteira Caminhada</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 30 reps</div>
+<div><strong>Carga:</strong> -</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cardio/_1080/Treadmill_Walk_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-header" style="background:linear-gradient(90deg,#a21caf,#7c3aed)"><div style="display:flex;gap:10px;align-items:center;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.12);display:grid;place-items:center;font-weight:700;">⚡</div><h2 style="margin:0;font-size:18px">Treino de Posterior e Glúteo</h2></div><div class="toggle" onclick="toggleSection(this)">-</div></div>
+<div class="section-body" style="margin-top:12px;display:block;">
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Agachamento com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Dumbbell_Squat_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Abdução de Quadril Máquina</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Hip_Abduction_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Elíptico</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 25 reps</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cardio/_1080/Elliptical_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Afundo com Barra Livre</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x12, 3x10, 2x8</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/barbell/_1080/Barbell_Reverse_Lunge_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Agachamento Sumô no Step com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/DB_Sumo_Squat_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Abdução de Quadril Máquina (2ª vez)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Hip_Abduction_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Cadeira Extensora</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Leg_Extension_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Cadeira Extensora Unilateral</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10+10+10 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Single_Leg_Extension_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Leg Press 45º Unilateral</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x12, 3x10, 2x8</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 60s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Leg_Press_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-header" style="background:linear-gradient(90deg,#f59e0b,#fb923c)"><div style="display:flex;gap:10px;align-items:center;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.12);display:grid;place-items:center;font-weight:700;">⚡</div><h2 style="margin:0;font-size:18px">Treino de Peito, Tríceps e Bíceps</h2></div><div class="toggle" onclick="toggleSection(this)">-</div></div>
+<div class="section-body" style="margin-top:12px;display:block;">
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Alongamento de Ombros e Tríceps II</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x20</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/stretching/_1080/Triceps_Stretch_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Bike Spinning Sentada</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 40 reps</div>
+<div><strong>Carga:</strong> -</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cardio/_1080/Spin_Bike_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Abdominal Supra Solo</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 5x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 40s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/bodyweight/_1080/Crunch_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Tríceps Unilateral na Polia Alta (Pegada Neutra)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cables/_1080/Tricep_Pushdown_Rope_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Alongamento de Peitoral no Espaldar</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 40s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/stretching/_1080/Chest_Doorway_Stretch_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Mobilidade de Ombro III</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x20</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/stretching/_1080/Shoulder_Circles_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Rosca Alternada com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/DB_Alternating_Curl_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Tríceps na Polia com Corda (lento + curto)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x15 lento + 15 curto</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cables/_1080/Tricep_Pushdown_Rope_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Tríceps Unilateral na Polia Alta (Pegada Neutra) (2ª vez)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x15</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cables/_1080/Single_Arm_Tricep_Pushdown_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Crucifixo com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x12</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Dumbbell_Fly_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Crucifixo Inclinado com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x12</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Incline_Dumbbell_Fly_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Rosca Martelo com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 4x12</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Hammer_Curl_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="section-header" style="background:linear-gradient(90deg,#10b981,#14b8a6)"><div style="display:flex;gap:10px;align-items:center;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.12);display:grid;place-items:center;font-weight:700;">⚡</div><h2 style="margin:0;font-size:18px">Treino de Ombro e Costas</h2></div><div class="toggle" onclick="toggleSection(this)">-</div></div>
+<div class="section-body" style="margin-top:12px;display:block;">
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Puxada Alta (pegada neutra)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Lat_Pulldown_Neutral_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Abdominal Canivete</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x12</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/bodyweight/_1080/V-Up_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Esteira Caminhada</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 40 reps</div>
+<div><strong>Carga:</strong> -</div>
+<div><strong>Intervalo:</strong> -</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cardio/_1080/Treadmill_Walk_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Elevação Lateral Unilateral Sentado com Halteres</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Seated_Lateral_Raise_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Elevação Frontal Alternada</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x12</div>
+<div><strong>Carga:</strong> 4 a 6 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Front_Raise_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Desenvolvimento com Halteres (pegada neutra)</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/dumbbells/_1080/Neutral_Grip_DB_Press_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Puxada Neutra Triângulo</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cables/_1080/Seated_Row_V_Grip_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Remada Baixa Triângulo</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/cables/_1080/Seated_Row_V_Grip_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+<div style="margin-bottom:12px;">
+<div class="card">
+<div class="info">
+<h3>Puxada Aberta Barra Reta</h3>
+<div class="meta">
+<div><strong>Séries:</strong> 3x10/8/6 (Drop – faz tudo e conta como 1 série)</div>
+<div><strong>Carga:</strong> 0 kg</div>
+<div><strong>Intervalo:</strong> 30s</div>
+</div></div>
+<div class="thumb">
+<video controls muted preload="metadata" playsinline src="https://media.musclewiki.com/media/uploads/videos/branded/machines/_1080/Lat_Pulldown_Wide_FR_1080.mp4"></video>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+  Feito para você • Edite os vídeos substituindo os links no arquivo index.html
+</footer>
+</main>
+<script>
+function toggleSection(el){
+  var body = el.parentElement.nextElementSibling;
+  if(!body) return;
+  if(body.style.display === 'none'){
+    body.style.display = 'block';
+    el.textContent = '-';
+  } else {
+    body.style.display = 'none';
+    el.textContent = '+';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PDF</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f7fb; --glass: rgba(255,255,255,.6); --stroke: rgba(0,0,0,.06);
+      --text:#1b1b1d; --muted:#6b6f76; --shadow:0 10px 30px rgba(30,35,55,.08);
+      --radius:16px;
+    }
+    body{margin:0;font-family:"Sora",system-ui;background:var(--bg);color:var(--text)}
+    header{position:sticky;top:0;background:rgba(255,255,255,.55);backdrop-filter:blur(10px);
+           border-bottom:1px solid var(--stroke);box-shadow:0 6px 20px rgba(0,0,0,.05)}
+    .bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:14px 18px}
+    .back{
+      text-decoration:none;padding:8px 12px;border-radius:12px;border:1px solid var(--stroke);
+      background:var(--glass);box-shadow:var(--shadow);display:inline-flex;gap:8px;align-items:center;
+    }
+    .wrap{max-width:900px;margin:24px auto;padding:0 18px}
+    .note{
+      background:var(--glass);border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:18px;margin-bottom:28px;font-size:14px;color:var(--muted);text-align:center;line-height:1.5;
+    }
+    .section{
+      background:var(--glass);border:1px solid var(--stroke);border-radius:var(--radius);box-shadow:var(--shadow);
+      margin-bottom:20px;overflow:hidden;
+    }
+    .section-header{padding:14px 16px;font-weight:700;background:rgba(255,255,255,.5)}
+    .section-body{padding:12px 16px;display:grid;gap:10px}
+    .item{padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.8);border:1px solid var(--stroke);font-size:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <a class="back" href="index.html">⬅ Voltar</a>
+      <div style="margin-left:auto;font-weight:800">📄 PDF</div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="note">
+      “Apenas um molde rápido do que adicionei, vou melhorar e organizar melhor. Espero que goste.<br>
+      Vou dar uma pausa, pois estou doente e não estou bem.”
+    </div>
+
+    <div class="section">
+      <div class="section-header">Primeiro treino – Posterior</div>
+      <div class="section-body">
+        <div class="item">Mesa flexora (aquecimento) – 2x15/15</div>
+        <div class="item">Mesa flexora – 3x12 (6 reps seg + 6 normais)</div>
+        <div class="item">Cadeira flexora – 1x12 (6 reps seg + 6 normais)</div>
+        <div class="item">Flexora unilateral – 1x16 (6 reps seg + 6 normais)</div>
+        <div class="item">Stiff barra/halter – 4x12</div>
+        <div class="item">Terra sumô c/ halter – 4x15/12/10/10</div>
+        <div class="item">Panturrilha no leg horizontal – 5x15</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Segundo treino – Costas e Bíceps</div>
+      <div class="section-body">
+        <div class="item">Puxador frente – 4x12</div>
+        <div class="item">Remada sentada – 4x12</div>
+        <div class="item">Crucifixo invertido no voador – 4x12</div>
+        <div class="item">Rosca alternada – 4x12</div>
+        <div class="item">Rosca direta barra – 4x12</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Terceiro treino – Glúteos isolado</div>
+      <div class="section-body">
+        <div class="item">Coice 3 apoios (caneleira) – 2x12 (6 lentas + 6 normais)</div>
+        <div class="item">Coice no cabo (perna esticada) – 3x12 (6 normais + 6 curtinhas)</div>
+        <div class="item">Elevação pélvica – 3x12 (6 reps seg 2s + 6 normais)</div>
+        <div class="item">Avanço no Smith/halter – 4x12</div>
+        <div class="item">Cadeira abdutora – 1x36 (curtos + normais, 3x)</div>
+        <div class="item">Panturrilha em pé – 5x15 + drop 1x10/10/10/10</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Quarto treino – Peito, Ombro e Tríceps</div>
+      <div class="section-body">
+        <div class="item">Supino reto – 4x12</div>
+        <div class="item">Supino inclinado – 4x12</div>
+        <div class="item">Tríceps cordas – 4x12</div>
+        <div class="item">Tríceps francês halteres – 4x12</div>
+        <div class="item">Elevação frontal – 4x12</div>
+        <div class="item">Elevação lateral – 4x12</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Quinto treino – Quadríceps</div>
+      <div class="section-body">
+        <div class="item">Cadeira extensora – 2x20 (10 seg + 10 normais)</div>
+        <div class="item">Leg horizontal – 2x24 (8 lentos + 8 curtos + 8 rápidos)</div>
+        <div class="item">Leg 45 – 3x12 lentos</div>
+        <div class="item">Agachamento hack – 3x12 (6 lentos + 6 rápidos)</div>
+        <div class="item">Cadeira extensora unilateral – 2x8 lentos</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">Sexto treino – Glúteos / Posterior</div>
+      <div class="section-body">
+        <div class="item">Elevação pélvica – 5x10 (2s contração em todas)</div>
+        <div class="item">Coice 3 apoios (caneleira) – 4x10</div>
+        <div class="item">Coice no cabo (perna esticada) – 4x15 (5 curtas + 10 seg 2s)</div>
+        <div class="item">Agachamento búlgaro – 3x10</div>
+        <div class="item">Cadeira abdutora – 3x30 (drop triplo: 10 seg + 10 normais + 10 normais)</div>
+        <div class="item">Panturrilha no leg horizontal – 5x15</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
